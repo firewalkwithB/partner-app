@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from 'react';
 
 export default function Grid({ grid, handleClickBox }) {
   return grid.map((box, index) => {
@@ -8,7 +8,9 @@ export default function Grid({ grid, handleClickBox }) {
         onClick={handleClickBox}
         id={box.toString()}
         key={index}
-      ></div>
-    )
-  })
+      >
+        {index}
+      </div>
+    );
+  });
 }

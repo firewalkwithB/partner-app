@@ -41,6 +41,7 @@
   border: 1px solid black;
   width: 100px;
   height: 100px;
+  color: rgba(255, 255, 255, 0);
 }
 
 #grid {
@@ -49,10 +50,10 @@
   flex-wrap: wrap;
 }
 
-true {
+#true {
   background-color: blue;
 }
 
-false {
+#false {
   background-color: red;
 }

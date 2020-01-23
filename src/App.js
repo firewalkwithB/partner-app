@@ -1,7 +1,7 @@
-import React, { useState } from "react"
-import logo from "./logo.svg"
-import "./App.css"
-import Grid from "./Components/Grid"
+import React, { useState } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Grid from './Components/Grid';
 
 function App() {
   let [grid, setGrid] = useState([
@@ -13,18 +13,21 @@ function App() {
     false,
     false,
     false,
-    false
-  ])
+    false,
+  ]);
 
   const handleClickBox = e => {
-    let boxes = document.querySelectorAll(".box")
-    let currentIndex = boxes.indexOf(e.target)
-    if (grid[currentIndex].id === false) {
-      grid[currentIndex].id = true
+    console.log(e.target.innerText);
+
+    let currentIndex = e.target.innerText;
+
+    if (grid[currentIndex] === false) {
+      grid[currentIndex] = true;
     } else {
-      grid[currentIndex].id = false
+      grid[currentIndex] = false;
     }
-  }
+    setGrid([...grid]);
+  };
 
   return (
     <div className="App">
@@ -32,7 +35,7 @@ function App() {
         <Grid grid={grid} handleClickBox={handleClickBox} />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
