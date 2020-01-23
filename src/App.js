@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react"
+import logo from "./logo.svg"
+import "./App.css"
+import Grid from "./Components/Grid"
 
 function App() {
+  let [grid, setGrid] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ])
+
+  const handleClickBox = e => {
+    let boxes = document.querySelectorAll(".box")
+    let currentIndex = boxes.indexOf(e.target)
+    if (grid[currentIndex].id === false) {
+      grid[currentIndex].id = true
+    } else {
+      grid[currentIndex].id = false
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id="grid">
+        <Grid grid={grid} handleClickBox={handleClickBox} />
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

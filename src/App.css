@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.box {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+}
+
+#grid {
+  display: flex;
+  width: 400px;
+  flex-wrap: wrap;
+}
+
+true {
+  background-color: blue;
+}
+
+false {
+  background-color: red;
+}
