@@ -4,7 +4,7 @@ function Slider(props) {
   let styles = {
     backgroundColor: `rgb(${props.colorNumber[0]},${props.colorNumber[1]},${props.colorNumber[2]})`
   }
-
+  console.log("hi")
   return (
     <div id="slider">
       <label htmlFor="rSlider">R</label>
