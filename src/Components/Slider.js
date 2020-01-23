@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react';
 
 function Slider(props) {
   let styles = {
-    backgroundColor: `rgb(${props.colorNumber[0]},${props.colorNumber[1]},${props.colorNumber[2]})`
-  }
-  console.log("hi")
+    backgroundColor: `rgb(${props.colorNumber[0]},${props.colorNumber[1]},${props.colorNumber[2]})`,
+  };
+  console.log('hi');
   return (
     <div id="slider">
       <label htmlFor="rSlider">R</label>
@@ -36,7 +36,7 @@ function Slider(props) {
       ></input>
       <div id="colorBox" style={styles}></div>
     </div>
-  )
+  );
 }
 
-export default Slider
+export default Slider;
