@@ -48,6 +48,7 @@
   display: flex;
   width: 400px;
   flex-wrap: wrap;
+  margin: 32px;
 }
 
 #true {
@@ -56,4 +57,16 @@
 
 #false {
   background-color: red;
+}
+
+#colorBox {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+#slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
