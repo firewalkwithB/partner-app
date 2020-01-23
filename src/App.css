@@ -70,3 +70,14 @@
   flex-direction: column;
   align-items: center;
 }
+.day {
+  width: 100px;
+  height: 75px;
+  border: 1px solid black;
+}
+
+#thisWeek {
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+}
